@@ -49,7 +49,7 @@ def init_duckdb():
 
 # Fonction principale
 def main():
-    st.title("🚕 Analyse des Taxis Jaunes de NYC")
+    st.title("🚕 NYC Yellow Taxi Data Analysis")
     st.markdown("Un tableau de bord interactif pour explorer les données des courses de taxis jaunes de NYC avec DuckDB et Streamlit")
     
     # Initialisation de la connexion DuckDB

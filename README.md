@@ -5,15 +5,15 @@ Ce projet analyse les données NYC Yellow Taxi en utilisant DuckDB pour le trait
 ## Structure du projet
 
 ```
-newsletter-mai-25/
+streamlit-duckdb-analysis/
 ├── data/                # Données parquet et résultats d'analyse
 ├── scripts/             # Scripts Python pour télécharger et analyser les données
 │   ├── download_data.py # Télécharge les données Yellow Taxi
 │   └── analyze_data.py  # Analyse les données avec DuckDB
 ├── app/                 # Application Streamlit
 │   └── app.py           # Interface utilisateur Streamlit
-├── pyproject.toml      # Configuration du projet et dépendances
-└── post_substack.md     # Newsletter Substack Mai 2025
+├── pyproject.toml       # Configuration du projet et dépendances
+└── LICENSE              # Licence du projet
 ```
 
 ## Installation
@@ -60,8 +60,10 @@ L'application sera accessible à l'adresse http://localhost:8501
 
 - Analyse complète des données de taxi avec DuckDB
 - Visualisations interactives avec Streamlit et Plotly
-- Filtrage des données par date, distance et autres paramètres
+- Filtrage des données par date et par distance (par paliers de 10 miles pour de meilleures performances)
+- Interface entièrement en français
 - Possibilité d'exécuter des requêtes SQL personnalisées via l'interface
+- Gestion robuste des erreurs et des cas où les données ne sont pas disponibles
 
 ## À propos des données
 
