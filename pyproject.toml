@@ -1,0 +1,38 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "nyc-taxi-analysis"
+version = "0.1.0"
+description = "NYC Yellow Taxi Analysis with DuckDB and Streamlit"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+dependencies = [
+    "requests==2.31.0",
+    "duckdb==0.9.2",
+    "pandas==2.1.0",
+    "streamlit==1.29.0",
+    "plotly==5.18.0",
+    "pyarrow==14.0.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "ruff",
+    "pytest",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+select = ["E", "F", "B"]
+
+[tool.black]
+line-length = 100
+target-version = ["py39"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["app", "scripts"]
